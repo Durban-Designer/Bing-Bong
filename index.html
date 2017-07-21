@@ -7,17 +7,19 @@
   </head>
   <body>
     <script>
-    let i = 0;
-    while (i < 101) {
-      i++;
-      if (i % 3 == 0) {
-        $(".bong").innerHTML = "Bing ";
+    for (i = 0; i < 101; i++) {
+      if (i % 3 == 0 && i % 5 != 0) {
         console.log("Bing");
     }
-      if (i % 5 == 0) {
-        $(".bong").innerHTML = "Bong ";
+      if (i % 5 == 0 && i % 3 != 0) {
         console.log("Bong");
     }
+      if (i % 3 == 0 && i % 5 == 0) {
+        console.log("Bing Bong");
+      }
+      if (i % 3 != 0 && i % 5 != 0) {
+        console.log(i);
+      }
   }
     </script>
   </body>
